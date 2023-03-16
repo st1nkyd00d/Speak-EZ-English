@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css" />
+        <style>
+            @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
+        </style>
+        <title>Home | Speak EZ English</title>
+        <link rel="stylesheet" href="styles.css" />
+    </head>
+    <body>
+        <header>
+            <div class="logo"><img src="assets/Logo.png" alt="Logo" /></div>
+            <button class="abrir-menu" id="abrir"><i class="bi bi-list"></i></button>
+            <nav class="nav-menu" id="nav">
+                <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+                <ul class="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="aboutUs.html">Sobre Nosotros</a></li>
+                    <li><a href="planes.html">Planes</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+        <h2 class="contactP-title">Contáctanos</h2>
+        <div class="all-sections">
+            <section class="contact-section">
+                <div>
+                    <h3>¿Tienes dudas adicionales?</h3>
+                    <p class="p-contact-section">
+                        ¿Listo para mejorar tu inglés? ¿Tienes dudas? ¡Escríbenos! Nos encantaría saber de ti y ayudarte a alcanzar tus metas lingüísticas. Rellena el formulario a continuación y nos
+                        pondremos en contacto contigo lo antes posible.
+                    </p>
+                </div>
+                <div class="contact-cards">
+                    <div class="location-phone-cards">
+                        <div class="individual-contact-card">
+                            <img src="assets/icons/Ubicacion3.png" alt="ubicacion" />
+                            <h4>Ubicacion</h4>
+                            <p class="p-card">1 Woodsman Dr. Willingboro, NJ 08046</p>
+                        </div>
+                        <div class="individual-contact-card">
+                            <img src="assets/icons/Telefono1.png" alt="telefono" />
+                            <h4>Teléfono</h4>
+                            <p class="p-card">+58 4247214981</p>
+                        </div>
+                    </div>
+                    <div class="individual-contact-card">
+                        <img src="assets/icons/CorreoElectronico3.png" alt="correo" />
+                        <h4>Correo</h4>
+                        <p class="p-card">atiliojg1@gmail.com</p>
+                    </div>
+                </div>
+            </section>
+            <section class="form-section">
+                <form id="save-info">
+                    <label for="nombreYapellido">Nombre y apellido:</label>
+                    <input type="text" id="nombreYapellido" name="nombreYapellido" placeholder="Escribe tu nombre y apellido..." />
+                    <label for="correoElectr">Dirección de correo electrónico</label>
+                    <input type="text" id="correoElectr" name="correoElectr" placeholder="Escribe tu dirección de correo electrónico..." />
+                    <label for="telefono">Telefono de contacto</label>
+                    <input type="text" id="telefono" name="telefono" placeholder="Escribe el mejor número teléfonico para contactarte..." />
+                    <label for="ubicacion">¿Desde dónde nos escribes?</label>
+                    <input type="text" id="ubicacion" name="ubicacion" placeholder="Escribe desde donde nos estás contactando..." />
+                    <label for="mensaje">Mensaje</label>
+                    <textarea name="mensaje" id="mensaje" placeholder="Escribe tu mensaje aquí..."></textarea>
+                    <div class="submit-button-div"><input type="submit" id="submit-button" value="Enviar" /></div>
+                </form>
+            </section>
+        </div>
+        <footer>
+            <div class="footer-segment">
+                <a href="mailto:atiliojg1@gmail.com"><img class="footer-icon" src="assets/icons/CorreoElectronico2.png" alt="IconoCorreo" /></a>
+                <p>
+                    <a href="mailto:atiliojg1@gmail.com">atiliojg1@gmail.com</a>
+                </p>
+                <img src="assets/icons/Telefono2.png" alt="IconoTelefono" />
+                <p class="telefonoCelular">+58 4247214981</p>
+            </div>
+            <div class="footer-segment">
+                <p>© 2023 Speak EZEnglish, Inc. All Right Reserved.</p>
+            </div>
+            <div class="footer-segment">
+                <a href="https://twitter.com/home"><img src="assets/icons/Twitter.png" alt="IconoTw" /></a>
+                <p>
+                    <a href="https://twitter.com/home">s.ez.english</a>
+                </p>
+                <a href="https://www.instagram.com/"><img src="assets/icons/instagram1.png" alt="IconoIg" /></a>
+                <p>
+                    <a href="https://www.instagram.com/">s.ez.english</a>
+                </p>
+                <a href="https://www.facebook.com/"><img src="assets/icons/Facebook.png" alt="IconoFb" /></a>
+                <p>
+                    <a href="https://www.facebook.com/">Speak EZEnglish</a>
+                </p>
+            </div>
+        </footer>
+        <script src="./script.js"></script>
+    </body>
+</html>

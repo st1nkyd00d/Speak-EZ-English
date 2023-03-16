@@ -1,0 +1,863 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Open Sans", sans-serif;
+}
+
+header {
+    display: flex;
+    height: 80px;
+    justify-content: space-between;
+    background-color: #ebcfb2;
+    flex-direction: row;
+    padding: 10px;
+    font-size: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: 600;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 104px;
+    width: 104px;
+    margin-top: 15px;
+}
+
+.nav-menu {
+    display: flex;
+    padding: 1rem;
+}
+.nav-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    list-style-type: none;
+    align-items: last baseline;
+    text-decoration: none;
+}
+
+.abrir-menu,
+.cerrar-menu {
+    display: block;
+    border: 0;
+    font-size: 3rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.abrir-menu {
+    color: #424b54;
+}
+.cerrar-menu {
+    color: #ffffff;
+}
+.nav-menu {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #424b54;
+    padding: 20px;
+    box-shadow: 0 0 0 100vmax rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    visibility: hidden;
+    z-index: 99;
+}
+
+.nav-menu.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.nav-list {
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: end;
+}
+
+.nav-list li {
+    margin: 10px 0px 10px 50px;
+}
+.nav-list li a {
+    color: #ffffff;
+}
+
+.banner-landing {
+    display: flex;
+    flex-direction: row;
+    background-image: url(assets/LandingAprendeInglesTlf.png);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    height: 360px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0px;
+}
+
+.banner-landing h2 {
+    font-size: 20px;
+    color: #424b54;
+    margin: 10px 0px 10px 0px;
+    padding: 3px;
+    text-shadow: 1px 2px #c0c0c0;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+.banner-landing button {
+    border: none;
+    padding: 10px 30px 10px 30px;
+    margin-top: 230px;
+    background-color: #ebcfb2;
+    box-shadow: 1px 3px #c0c0c0;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+    white-space: nowrap;
+}
+
+.cards {
+    display: flex;
+    flex-direction: column;
+    margin: 50px 20px 50px 20px;
+    justify-content: space-around;
+}
+
+.individualCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px;
+}
+
+.individualCard img {
+    border-style: solid;
+    border-width: 10px;
+    border-color: #e1ce7a;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.individualCard h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.individualCard p {
+    padding: 1rem;
+    text-align: justify;
+    max-width: 230px;
+    font-weight: 500;
+}
+
+footer {
+    font-weight: 600;
+    display: flex;
+    background-color: #ebcfb2;
+    justify-content: space-between;
+    height: 50px;
+}
+
+.footer-segment {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px;
+    padding: 5px;
+}
+
+.footer-segment p {
+    display: none;
+}
+
+.footer-segment a {
+    text-decoration: none;
+    color: black;
+    margin-left: 2px;
+    padding: 0px;
+}
+
+.footer-segment img {
+    padding: 5px;
+}
+
+/*
+.telefonoCelular {
+    padding-left: 10px;
+} */
+
+.secciones-sobreNosotros {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.seccion-organizacion {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    max-width: 767px;
+    margin: 0px 0px 0px 30px;
+}
+
+.seccion-organizacion h2 {
+    margin: 15px 20px 30px 20px;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.seccion-organizacion p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 0px 30px 20px 0px;
+    width: auto;
+}
+
+.seccion-organizacion button {
+    border: none;
+    margin: 10px 40px 40px 0px;
+    padding: 15px 15px 15px 15px;
+    background-color: #ebcfb2;
+    box-shadow: 1px 3px #c0c0c0;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.carousel {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.carousel img {
+    border: solid;
+    border-width: 3px;
+    border-radius: 25px;
+    display: inline-block;
+    height: 195px;
+    width: 195px;
+    margin-right: 10px;
+    transition: transform 0.3s ease-in-out;
+    opacity: 0;
+    position: absolute;
+    left: 27%;
+}
+
+.carousel img.active {
+    opacity: 1;
+}
+
+.carousel img:last-child {
+    margin-right: 0;
+}
+
+.carousel img:hover {
+    transform: scale(1.1);
+}
+
+.carousel-nav {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.carousel-nav button {
+    background-color: transparent;
+    color: black;
+    font-size: 40px;
+    margin: 0px 40px;
+    padding: 0px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.carousel-nav button:hover {
+    opacity: 0.8;
+    background-color: #424b54;
+}
+
+.seccion-profesores {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px 20px 30px;
+    max-width: 767px;
+}
+
+.seccion-profesores h3 {
+    font-size: 25px;
+    margin: 20px 0px 20px 0px;
+}
+
+.seccion-profesores p {
+    font-size: 14px;
+    text-align: justify;
+    margin: 0px 20px 20px 0px;
+    width: auto;
+}
+
+.plan-structure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 767px;
+}
+
+.plan-structure h2 {
+    font-size: 23px;
+    margin: 10px 10px 10px 40px;
+    text-align: center;
+}
+
+.plan-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+.individual-plan-card {
+    background-color: #c5baaf;
+    border-style: solid;
+    border-radius: 25px;
+    border-width: 5px;
+    border-color: #424b54;
+    margin: 30px 30px 30px 60px;
+    max-width: 280px;
+    height: 470px;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 1px 3px #c0c0c0;
+}
+
+.individual-plan-card h4 {
+    font-size: 22px;
+    font-weight: 600;
+    width: 250px;
+    margin: 0px 0px 5px -5px;
+}
+
+.individual-plan-card p {
+    font-size: 12px;
+    justify-content: center;
+    width: 270px;
+    font-weight: 700;
+    margin: 0px 0px 0px -15px;
+}
+
+.cost {
+    display: flex;
+    background-color: #e1ce7a;
+    border-style: solid;
+    border-width: 1px;
+    border-radius: 50px;
+    width: 180px;
+    margin: 30px 0px 0px 32px;
+}
+
+.cost p {
+    font-size: 30px;
+    padding: 10px 0px 10px 7px;
+}
+
+.individual-plan-card ul {
+    margin-top: 20px;
+    list-style: disc;
+    text-align: left;
+}
+
+.individual-plan-card li {
+    font-size: 16px;
+    font-weight: 600;
+    margin: 0px 0px 20px 30px;
+}
+
+.left-button {
+    margin-top: 0px;
+    border-radius: 25px;
+    width: 200px;
+    height: 55px;
+    border: none;
+    background-color: #ebcfb2;
+    box-shadow: 1px 3px #958c84;
+    font-size: 18px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.mid-right-buttons {
+    margin-top: 30px;
+    border-radius: 25px;
+    width: 200px;
+    height: 55px;
+    border: none;
+    background-color: #ebcfb2;
+    box-shadow: 1px 3px #958c84;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+.contactP-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 50px;
+    letter-spacing: 2px;
+    margin: 10px;
+}
+
+.all-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact-section h3 {
+    font-size: 25px;
+    text-align: center;
+}
+
+.p-contact-section {
+    width: auto;
+    text-align: justify;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 10px 30px 10px 30px;
+    line-height: 20px;
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+}
+.location-phone-cards {
+    display: flex;
+    flex-direction: column;
+}
+
+.individual-contact-card {
+    background-color: #ebcfb2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 30px 50px 30px 50px;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #424b54;
+    width: 180px;
+    height: 180px;
+}
+
+.individual-contact-card img {
+    height: 56px;
+    width: 56px;
+    margin: 5px;
+}
+
+.individual-contact-card h4 {
+    font-size: 20px;
+    margin: 5px;
+}
+
+.p-card {
+    margin: 10px 5px 5px 5px;
+    width: 182px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.form-section {
+    display: flex;
+    font-size: 20px;
+    flex-direction: column;
+    width: 350px;
+}
+
+form {
+    margin: 20px;
+}
+
+input[type="text"] {
+    font-size: 20px;
+    width: 320px;
+    height: 15px;
+    padding: 12px 10px;
+    margin: 8px 0;
+}
+
+textarea {
+    font-size: 20px;
+    margin: 0px;
+    padding: 6px 10px;
+    width: 320px;
+    height: 160px;
+    resize: none;
+}
+
+::placeholder {
+    opacity: 0.5;
+}
+
+.submit-button-div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+#submit-button {
+    border-radius: 25px;
+    width: 220px;
+    height: 62px;
+    border: none;
+    background-color: #ebcfb2;
+    box-shadow: 1px 3px #958c84;
+    font-size: 20px;
+    font-weight: 600;
+    transition: all 0.5s ease;
+}
+
+#submit-button:hover {
+    background-color: #b3997d;
+}
+
+button:hover {
+    background-color: #b3997d;
+}
+
+@media only screen and (min-width: 768px) {
+    header {
+        height: 100px;
+    }
+    footer {
+        height: 80px;
+    }
+
+    .logo img {
+        height: 140px;
+        width: 140px;
+    }
+
+    .banner-landing {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .banner-landing h2 {
+        font-size: 25px;
+        color: #424b54;
+        margin: 0px 0px 10px 0px;
+        padding: 3px;
+        text-shadow: 1px 2px #c0c0c0;
+        font-weight: 600;
+        white-space: nowrap;
+        line-height: 15px;
+    }
+
+    .banner-landing h2:first-child {
+        margin-top: 200px;
+    }
+
+    .banner-landing button {
+        margin-top: 20px;
+    }
+    .secciones-sobreNosotros {
+        align-items: center;
+    }
+
+    .seccion-organizacion {
+        max-width: 1000px;
+        margin: 0px 0px 0px 30px;
+    }
+
+    .seccion-organizacion h2 {
+        margin: 15px 20px 30px 20px;
+        text-align: center;
+        font-size: 50px;
+        font-weight: 600;
+    }
+
+    .seccion-organizacion p {
+        font-size: 20px;
+        text-align: justify;
+        margin: 0px 30px 20px 0px;
+        width: auto;
+    }
+    .seccion-organizacion button {
+        margin-left: 40px;
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+
+    .carousel {
+        position: absolute;
+        height: 25%;
+        left: 28%;
+        width: 50%;
+    }
+
+    .carousel-nav {
+        margin-top: 250px;
+    }
+    .seccion-profesores {
+        max-width: 1000px;
+    }
+
+    .seccion-profesores p {
+        font-size: 20px;
+        text-align: justify;
+        margin: 0px 20px 20px 0px;
+        width: auto;
+    }
+
+    .plan-structure {
+        max-width: 1000px;
+    }
+
+    .plan-structure h2 {
+        font-size: 36px;
+        margin: 10px 100px 10px 100px;
+        text-align: center;
+    }
+
+    .all-sections {
+        margin-bottom: 30px;
+    }
+    .contact-section h3 {
+        font-size: 35px;
+        text-align: center;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+
+    .p-contact-section {
+        font-size: 22px;
+        line-height: 25px;
+        margin: 20px 40px 10px 40px;
+    }
+
+    .contact-cards {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .individual-contact-card {
+        margin: 30px 30px 30px 30px;
+        width: 200px;
+        height: 200px;
+    }
+
+    .location-phone-cards {
+        flex-direction: row;
+    }
+
+    .form-section {
+        font-weight: 600;
+        max-width: 700px;
+        margin-left: -280px;
+    }
+
+    input[type="text"] {
+        font-size: 20px;
+        width: 600px;
+        height: 15px;
+        padding: 12px 10px;
+        margin: 8px 0;
+    }
+
+    textarea {
+        font-size: 20px;
+        width: 600px;
+        height: 160px;
+        resize: none;
+        margin-bottom: 10px;
+    }
+
+    .submit-button-div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        margin-left: 280px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    header {
+        height: 121px;
+    }
+
+    .logo img {
+        height: 165px;
+        width: 165px;
+    }
+    .banner-landing {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .banner-landing h2 {
+        font-size: 40px;
+        margin: 0px 600px 25px 0px;
+    }
+
+    .banner-landing button {
+        margin: 40px 600px 25px 0px;
+        padding: 20px 80px;
+    }
+
+    .banner-landing h2:first-child {
+        margin-top: 60px;
+    }
+
+    .cards {
+        flex-direction: row;
+    }
+
+    .footer-segment p {
+        font-size: 13px;
+        display: inline;
+        margin: 0px 5px 5px 5px;
+        padding: 0px 0px;
+    }
+
+    .footer-segment img {
+        height: 24px;
+        width: 24px;
+        padding: 0px;
+    }
+    .secciones-sobreNosotros {
+        flex-direction: row;
+    }
+
+    .seccion-organizacion {
+        margin: 0px 30px;
+    }
+
+    .seccion-organizacion h2 {
+        text-align: center;
+        margin-right: 20px;
+        margin-bottom: 0px;
+    }
+
+    .seccion-organizacion p {
+        font-size: 22px;
+        line-height: 30px;
+        padding: 15px;
+        margin: 0px;
+    }
+
+    .seccion-organizacion button {
+        padding-right: 120px;
+        padding-left: 120px;
+    }
+
+    .carousel {
+        height: 320px;
+        left: 59.5%;
+        width: 420px;
+        top: 15%;
+    }
+
+    .carousel img {
+        height: 300px;
+        width: 300px;
+    }
+
+    .carousel-nav {
+        margin-top: 300px;
+    }
+
+    .seccion-profesores {
+        margin: 20px;
+    }
+    .seccion-profesores h3 {
+        font-size: 30px;
+        margin: 30px 0px;
+    }
+
+    .seccion-profesores p {
+        font-size: 25;
+        margin: 0px;
+        width: 400px;
+    }
+
+    .plan-structure h2 {
+        margin: 20px 70px 10px 70px;
+        font-size: 44px;
+        text-align: center;
+        font-weight: 600;
+    }
+    .plan-structure {
+        max-width: 1400px;
+    }
+
+    .plan-cards {
+        flex-direction: row;
+    }
+
+    .individual-plan-card {
+        margin: 30px 40px 60px 50px;
+    }
+
+    .individual-plan-card h4 {
+        font-size: 27px;
+    }
+
+    .all-sections {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .contact-section {
+        width: 700px;
+    }
+    .contact-section h3 {
+        font-size: 40px;
+    }
+
+    .p-contact-section {
+        width: 440px;
+    }
+
+    .contact-cards {
+        flex-direction: column;
+    }
+
+    .form-section {
+        margin: 0px;
+    }
+}
